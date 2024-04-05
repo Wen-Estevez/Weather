@@ -1,29 +1,22 @@
 const result = document.querySelector(".result");
 const form = document.querySelector(".get-weather");
 const nameCity = document.querySelector("#city");
-//const nameCountry = document.querySelector("#country");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (nameCity.value === "" 
-  //|| nameCountry.value === ""
-  ) {
+  if (nameCity.value === "") {
     showError("Los campos son obligatorios");
     return;
   }
 
-  callAPI(nameCity.value
-    //, nameCountry.value
-    );
-  //console.log(nameCity.value);
-  //console.log(nameCountry.value);
+  callAPI(nameCity.value);
+
 });
-function callAPI(city, 
-    //country
-    ) {
+
+
+function callAPI(city) {
   const apiId = "5e4fb194104834545fd0f56e8c60ad75";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiId}`;
-  //const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiId}`;
 
   fetch(url).then(data => {
     return data.json();
@@ -75,12 +68,16 @@ function showError(message) {
 
   form.appendChild(alert);
   setTimeout(() => {
-    alert.remove(); //<- Esta funcion es para darle tiempo a la alerta
+    alert.remove(); 
   }, 3000);
 }
 
 function kelvinToCentrigrade(temp){
     return parseInt(temp - 273.15);
+}
+
+function clearHTML(){
+    result.innerHTML = '';
 }
 
 function clearHTML(){
