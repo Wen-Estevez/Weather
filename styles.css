@@ -1,0 +1,53 @@
+body {
+  font-family: Georgia, "Times New Roman", Times;
+  background-image: url(https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/09/20/cielo-violeta-purpura-gettyimages.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.weather-content {
+  max-width: 30%;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  text-align: center;
+  padding: 15px 15px 50px;
+  margin: 10% auto 0;
+  border-radius: 10px;
+  box-shadow: rgba(163, 163, 163, 0.15) 4px 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.weather-content h1 {
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+.weather-content p {
+  font-size: 15px;
+}
+.result {
+  margin-bottom: 2px;
+}
+.result p {
+  margin: 2px 0 2px;
+}
+.result h2 {
+  font-size: 70px;
+}
+#city {
+  width: 90%;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #e3e9f9;
+  outline: none;
+}
+#button {
+  width: 91%;
+  height: 25px;
+  border-radius: 5px;
+  color: white;
+  background-color: #7a4dff;
+  border: none;
+}
+#button:hover{
+    transform : scale(0.98);
+}
